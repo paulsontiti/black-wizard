@@ -422,8 +422,8 @@ function SMSkills() {
   };
 
   return (
-    <div className="lg:block hidden">
-      <div className="flex justify-center items-center ">
+    <div className="lg:flex flex-col justify-center items-center hidden">
+      <div>
         {skillsArray.map((skill) => (
           <TabButton
             key={skill}
