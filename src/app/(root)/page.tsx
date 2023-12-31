@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
       <div className="mx-auto py-4 mt-24 items-center justify-center">
         <HeroSection />
-        {/* <Achievement /> */}
+        <Achievement />
         <AboutSection />
         <ProjectSection />
         <EmailSection />
