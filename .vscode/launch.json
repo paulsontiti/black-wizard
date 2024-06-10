@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/pll/Desktop/portfolio tutorials/black-wizard",
-      "program": "c:/Users/pll/Desktop/portfolio tutorials/black-wizard/build/Debug/outDebug",
+      "cwd": "c:/Users/pll/Desktop/portfolio tutorials/amin",
+      "program": "c:/Users/pll/Desktop/portfolio tutorials/amin/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

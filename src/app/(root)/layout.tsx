@@ -5,9 +5,9 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Paulson Nwoha",
+  title: "AL-amin Muhammad",
   description: `
-  My name is Paulson Nwoha.I'm a Full Stack Web Developer,
+  My name is AL-amin Muhammad.I'm a Full Stack Web Developer,
    I've gained valuable experience in developing
     and maintaining front-end code for web applications.
      I have successfully transformed app designs into front-end code using ReactJs,

@@ -8,6 +8,7 @@ import emailjs from "@emailjs/browser";
 const EmailSection = () => {
   const [message, setMessage] = useState("");
   const [fromEmail, setFromEmail] = useState("");
+  const [userName, setUserName] = useState("");
   const [subject, setSubject] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
   const [errMsg, setErrMsg] = useState("");
@@ -15,16 +16,18 @@ const EmailSection = () => {
 
   function SendEmail(e: any) {
     e.preventDefault();
-    if (fromEmail && subject && message) {
+    if (fromEmail && subject && message && userName) {
       setDisableButton(true);
       emailjs
         .send(
-          "paulsontiti",
-          "paulsontiti",
+          "service_n331pwv",
+          "template_d1fwqrd",
           {
-            to_name: "paulsontiti@gmail.com",
-            message: `Subject: ${subject} \n ${message}`,
-            from_name: fromEmail,
+            to_name: process.env.To_Email,
+            message: message,
+            user_email: fromEmail,
+            user_name: userName,
+            subject: subject,
           },
           process.env.PUBLIC_KEY
         )
@@ -34,10 +37,16 @@ const EmailSection = () => {
             setSuccessMsg(
               "Thanks for contacting me. You will hear from me soon"
             );
+            setFromEmail("");
+            setSubject("");
+            setUserName("");
+            setMessage("");
           }
           setDisableButton(false);
         })
         .catch((err: any) => {
+          //TODO : Delete
+          console.log(err);
           setSuccessMsg("");
           setErrMsg("Something wrong happened, please try again");
           setDisableButton(false);
@@ -64,10 +73,10 @@ const EmailSection = () => {
           and revenue growth.`}
         </p>
         <div className="socials flex gap-2">
-          <Link href={"https://www.linkedin.com/in/paulson-nwoha-2b255a113/"}>
+          <Link href={"https://www.linkedin.com/in/Amin-nwoha-2b255a113/"}>
             <FaLinkedinIn className="cursor-pointer  h-10 w-10 m-2 text-primary-500 group-hover/link:text-white" />
           </Link>
-          <Link href={"https://github.com/paulsontiti/"}>
+          <Link href={"https://github.com/Amintiti/"}>
             <FaGithub className="cursor-pointer  h-10 w-10 m-2 text-primary-500 group-hover/link:text-white" />
           </Link>
         </div>
@@ -82,6 +91,30 @@ const EmailSection = () => {
           <div className="bg-red-700 text-white py-2 px-4 mb-4">{errMsg}</div>
         )}
         <form className="flex flex-col gap-4" onSubmit={(e) => SendEmail(e)}>
+          <div className="mb-2">
+            <label
+              htmlFor="userName"
+              className="text-white text-sm font-medium block mb-1"
+            >
+              Your Name Please<span className="text-red-600">*</span>
+            </label>
+            <input
+              value={userName}
+              className="
+            bg-[#18191E] border border-stone-100
+            placeholder-[#9CA2A9] text-gray-100
+            text-sm block w-full p-2.5
+            h-10 px-2 rounded-lg
+             focus:border-primary-500"
+              type="text"
+              id="userName"
+              required
+              placeholder="John Doe"
+              onChange={(e) => {
+                setUserName(e.target.value);
+              }}
+            />
+          </div>
           <div className="mb-2">
             <label
               htmlFor="email"

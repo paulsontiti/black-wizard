@@ -24,20 +24,25 @@ const ProjectCard = ({
   return (
     <div className="">
       <div
-        className="h-72 w-full lg:h-72 rounded-t-xl group relative"
-        style={{
-          backgroundImage: `url(${imgUrl})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+        className="h-36 w-full lg:h-36 rounded-t-xl group relative"
+        // style={{
+        //   backgroundImage: `url(${imgUrl})`,
+        //   backgroundSize: "cover",
+        //   backgroundRepeat: "no-repeat",
+        // }}
       >
-        <Overlay
+        <iframe
+          src="https://www.youtube.com/embed/ZD6SM4ecuHI?si=nxcbVUzNcsP5ZbaZ"
+          title={title}
+          allowFullScreen
+        ></iframe>
+        {/* <Overlay
           gitUrl={gitUrl}
           previewUrl={previewUrl}
           youtubeUrl={youtubeUrl}
-        />
+        /> */}
       </div>
-      <div className="text-white rounded-b-xl bg-[#181818] py-6 px-4">
+      <div className="text-white text-sm rounded-b-xl py-4 px-2">
         <h5 className=" mb-2">{title}</h5>
         {description}
       </div>

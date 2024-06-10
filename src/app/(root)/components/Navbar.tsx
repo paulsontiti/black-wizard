@@ -134,7 +134,7 @@ export function Logo() {
       bg-gradient-to-br from-primary-500 via-primary-500 to-primary-500
       `}
     >
-      Paulson Nwoha
+      AL-amin Muhammad
     </span>
   );
 }

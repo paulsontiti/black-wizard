@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const IntroTextAnimation = () => {
   const intro = [
-    `I'm Paulson Nwoha.`,
+    `I'm AL-amin Muhammad.`,
     1000,
     `I'm a Computer Scientist,`,
     1000,

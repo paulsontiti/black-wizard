@@ -17,7 +17,16 @@ const projectData: ProjectDataType[] = [
   {
     imgUrl: "/assets/project-image/bwt.png",
     title: "Online Training Platform",
-    description: <div></div>,
+    description: (
+      <div>
+        In publishing and graphic design, Lorem ipsum is a placeholder text
+        commonly used to demonstrate the visual form of a document or a typeface
+        without relying on meaningful content. Lorem ipsum may be used as a
+        placeholder before the final copy is available. It is also used to
+        temporarily replace text in a process called greeking, which allows
+        designers to consider the form of a webpage or publicati..
+      </div>
+    ),
     id: 1,
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -27,7 +36,16 @@ const projectData: ProjectDataType[] = [
   {
     imgUrl: "/assets/project-image/bwt.png",
     title: "Online Training Platform",
-    description: <div></div>,
+    description: (
+      <div>
+        In publishing and graphic design, Lorem ipsum is a placeholder text
+        commonly used to demonstrate the visual form of a document or a typeface
+        without relying on meaningful content. Lorem ipsum may be used as a
+        placeholder before the final copy is available. It is also used to
+        temporarily replace text in a process called greeking, which allows
+        designers to consider the form of a webpage or publicati..
+      </div>
+    ),
     id: 2,
     tag: ["All", "Mobile"],
     gitUrl: "/",
@@ -37,7 +55,16 @@ const projectData: ProjectDataType[] = [
   {
     imgUrl: "/assets/project-image/bwt.png",
     title: "Online Training Platform",
-    description: <div></div>,
+    description: (
+      <div>
+        In publishing and graphic design, Lorem ipsum is a placeholder text
+        commonly used to demonstrate the visual form of a document or a typeface
+        without relying on meaningful content. Lorem ipsum may be used as a
+        placeholder before the final copy is available. It is also used to
+        temporarily replace text in a process called greeking, which allows
+        designers to consider the form of a webpage or publicati..
+      </div>
+    ),
     id: 3,
     tag: ["All", "Mobile"],
     gitUrl: "/",
@@ -47,7 +74,16 @@ const projectData: ProjectDataType[] = [
   {
     imgUrl: "/assets/project-image/bwt.png",
     title: "Online Training Platform",
-    description: <div></div>,
+    description: (
+      <div>
+        In publishing and graphic design, Lorem ipsum is a placeholder text
+        commonly used to demonstrate the visual form of a document or a typeface
+        without relying on meaningful content. Lorem ipsum may be used as a
+        placeholder before the final copy is available. It is also used to
+        temporarily replace text in a process called greeking, which allows
+        designers to consider the form of a webpage or publicati..
+      </div>
+    ),
     id: 4,
     tag: ["All", "Mobile"],
     gitUrl: "/",
@@ -57,7 +93,16 @@ const projectData: ProjectDataType[] = [
   {
     imgUrl: "/assets/project-image/bwt.png",
     title: "Online Training Platform",
-    description: <div></div>,
+    description: (
+      <div>
+        In publishing and graphic design, Lorem ipsum is a placeholder text
+        commonly used to demonstrate the visual form of a document or a typeface
+        without relying on meaningful content. Lorem ipsum may be used as a
+        placeholder before the final copy is available. It is also used to
+        temporarily replace text in a process called greeking, which allows
+        designers to consider the form of a webpage or publicati..
+      </div>
+    ),
     id: 5,
     tag: ["All", "Mobile"],
     gitUrl: "/",
@@ -67,7 +112,16 @@ const projectData: ProjectDataType[] = [
   {
     imgUrl: "/assets/project-image/bwt.png",
     title: "Online Training Platform",
-    description: <div></div>,
+    description: (
+      <div>
+        In publishing and graphic design, Lorem ipsum is a placeholder text
+        commonly used to demonstrate the visual form of a document or a typeface
+        without relying on meaningful content. Lorem ipsum may be used as a
+        placeholder before the final copy is available. It is also used to
+        temporarily replace text in a process called greeking, which allows
+        designers to consider the form of a webpage or publicati..
+      </div>
+    ),
     id: 6,
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -110,8 +164,8 @@ const ProjectSection = () => {
           onClick={handleTagChange}
         />
       </div>
-      <h1 className="text-2xl">Work in progress......</h1>
-      {/* <ul ref={ref} className="w-full flex flex-wrap  justify-center">
+      {/* <h1 className="text-2xl">Work in progress......</h1> */}
+      <ul ref={ref} className="w-full flex flex-wrap  justify-center">
         {projectData
           .filter((data) => data.tag.includes(tag))
           .map((project) => (
@@ -145,7 +199,7 @@ const ProjectSection = () => {
               />
             </motion.li>
           ))}
-      </ul> */}
+      </ul>
     </section>
   );
 };
